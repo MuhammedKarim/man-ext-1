@@ -213,8 +213,8 @@ function initPrayerTimes() {
     if (posterImages.length === 0) return;
 
     const overlay = document.getElementById('poster-overlay');
-    const img = overlay.querySelector('.poster-img');
-    const imgUrl = posterImages[posterIndex % posterImages.length];
+    const url = posterImages[posterIndex % posterImages.length];
+    const imgUrl = `${url}?t=${Date.now()}`;
 
     overlay.style.setProperty('--poster-url', `url(${imgUrl})`);
     img.src = imgUrl;
