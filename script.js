@@ -147,7 +147,7 @@ function initPrayerTimes() {
         if (!dhikrData) return;
         document.getElementById("dhikr-morning").textContent = formatTo12Hour(getDisplayTime("morning")) || "-";
         document.getElementById("dhikr-evening").textContent = formatTo12Hour(getDisplayTime("evening")) || "-";
-        document.getElementById("dhikr-night").textContent =  formatTo12Hour(getDisplayTime("night")) || "-";
+        // document.getElementById("dhikr-night").textContent =  formatTo12Hour(getDisplayTime("night")) || "-";
       })
       .catch(err => console.error("Dhikr fetch error:", err));
   }
@@ -492,7 +492,7 @@ function initPrayerTimes() {
   checkMakroohPoster();
   preloadAndCheckPosters();
   checkLiveStatusAndToggleOverlay();
-  pollTaraweehStateAndApply();
+  // pollTaraweehStateAndApply();
   
   setInterval(updateClock, 1000);
   setInterval(loadPrayerTimes, 1000);
@@ -503,5 +503,5 @@ function initPrayerTimes() {
   setInterval(refreshPosters, 600000);
   setInterval(checkLiveStatusAndToggleOverlay, 5000);
   setInterval(checkVersionAndReload, 60000);
-  setInterval(pollTaraweehStateAndApply, 1000);
+  // setInterval(pollTaraweehStateAndApply, 1000);
 }
